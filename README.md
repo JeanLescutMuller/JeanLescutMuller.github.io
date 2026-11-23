@@ -1,7 +1,10 @@
 # JeanLescutMuller.github.io
 
-Jean Lescut-Muller's personal GitHub Pages site, served at `https://jeanlescutmuller.github.io/`. It holds only public pages the apps need; the apps' code lives in their own private repos.
+Jean Lescut-Müller's personal GitHub Pages site, served at `https://jeanlescutmuller.github.io/`. `.nojekyll`: pages are served exactly as written; this README is not published on the site.
 
-| Page | URL | Source of the facts |
-|---|---|---|
-| Cutaway privacy policy (Google Play) | `https://jeanlescutmuller.github.io/cutaway/privacy/` | the private repo `cutaway`: `AGENTS.md` (official identity), `app/src/` (location, storage, outside services) |
+| Page | URL |
+|---|---|
+| Home: profile, featured projects, experience, agentic workflows | `https://jeanlescutmuller.github.io/` |
+| Cutaway privacy policy (Google Play) | `https://jeanlescutmuller.github.io/cutaway/privacy/` |
+
+Rules for the home page: link only to public repositories; leave out personal projects.

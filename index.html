@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jean Lescut-Müller</title>
+<meta name="description" content="Jean Lescut-Müller, Lead Data Scientist in Zürich: Cutaway, Sigyx and ChipDyno; 13 years of machine learning at Meta, Richemont and Expedia; official XGBoost contributor; agentic workflows with Claude Code.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root { --paper: #F5EFE3; --card: #FBF7EF; --ink: #1F1A15; --soft: #5A4F43; --rule: #DDD0BA; --red: #B3261E; --tag: #E9DFCC; --icon-bg: #F1E3D3; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --paper: #1A1612; --card: #231E19; --ink: #EFE7DA; --soft: #B5A896; --rule: #3A3129; --red: #E8776F; --tag: #332A22; --icon-bg: #3A2622; }
+  }
+  :root[data-theme="dark"] { --paper: #1A1612; --card: #231E19; --ink: #EFE7DA; --soft: #B5A896; --rule: #3A3129; --red: #E8776F; --tag: #332A22; --icon-bg: #3A2622; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 Georgia, "Times New Roman", serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  svg.i { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+  h1 { font-size: 40px; line-height: 1.15; margin: 0; }
+  .role { font-size: 20px; color: var(--soft); margin: 6px 0 16px; font-style: italic; }
+  .btn.alt { color: var(--red); background: transparent; border: 1px solid var(--red); padding: 9px 13px; }
+  .btn .two { display: flex; flex-direction: column; gap: 3px; }
+  .joke { font: italic 400 10px/1 Georgia, serif; opacity: .75; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; font: 600 15px/1 system-ui, sans-serif; color: var(--paper); background: var(--red); padding: 10px 14px; border-radius: 6px; text-decoration: none; }
+  h2 { display: flex; align-items: center; gap: 10px; font-size: 22px; margin: 48px 0 14px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  h2 svg.i { color: var(--red); width: 22px; height: 22px; }
+  a { color: var(--red); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  .ic { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--icon-bg); color: var(--red); flex: none; }
+  .ic svg.i { width: 22px; height: 22px; }
+  /* featured */
+  .featured { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .feat { background: var(--card); border: 1px solid var(--rule); border-top: 3px solid var(--red); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 15.5px; line-height: 1.5; }
+  .feat .head { display: flex; align-items: center; gap: 12px; }
+  .feat h3 { margin: 0; font-size: 21px; }
+  .feat .kind { font: 600 11px/1.2 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .06em; color: var(--soft); }
+  .feat p { margin: 0; flex: 1; }
+  .feat .go { display: inline-flex; align-items: center; gap: 6px; font: 600 14px/1 system-ui, sans-serif; text-decoration: none; }
+  .feat .go svg.i { width: 16px; height: 16px; }
+  /* timeline */
+  table { border-collapse: collapse; width: 100%; font-size: 16px; }
+  td { vertical-align: top; padding: 7px 8px 7px 0; border-bottom: 1px solid var(--rule); }
+  td.when { white-space: nowrap; color: var(--soft); width: 1%; padding-right: 16px; font-variant-numeric: tabular-nums; }
+  /* lists of items with icons */
+  .items { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 10px 18px; }
+  @media (max-width: 400px) { .items { grid-template-columns: 1fr; } }
+  .item { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; padding: 6px 0; }
+  .item .ic { width: 34px; height: 34px; border-radius: 8px; }
+  .item .ic svg.i { width: 18px; height: 18px; }
+  .item b { display: block; font-size: 16px; }
+  .tag { display: inline-block; font: 600 10.5px/1 system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--soft); background: var(--tag); border-radius: 4px; padding: 3px 5px; margin-left: 6px; vertical-align: 2px; }
+  .lead { margin: 0 0 16px; }
+  footer { margin-top: 48px; font-size: 14px; color: var(--soft); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-film" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5M2 15h5M17 9h5M17 15h5"/></symbol>
+  <symbol id="i-sat" viewBox="0 0 24 24"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4-6 6z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V5"/><circle cx="12" cy="4" r="1"/><path d="M9 13v1M15 13v1M9 17h6M2 13v3M22 13v3"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v5M8 8v.01M12 16v-5M12 13a2 2 0 0 1 4 0v3"/></symbol>
+  <symbol id="i-so" viewBox="0 0 24 24"><path d="M4 14v6h14v-6"/><path d="M8 17h6M8.3 13.5l6 1.2M9.6 9.6l5.5 2.6M12.3 5.9l4.6 4M16.4 3l3 5.2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></symbol>
+  <symbol id="i-merge" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="12" r="2"/><path d="M6 7v10M6 7c0 4 4 5 10 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 9 3 3-3 3M12 15h6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.5 18a9.5 9.5 0 1 1 17 0"/><path d="m12 14 4-5"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 3 8 3 8H3s3-2 3-8"/><path d="M10 21a2 2 0 0 0 4 0"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3M14 9l2 2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4h10a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 16a4 4 0 0 1 4-4h10"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="m8 2 4 5 4-5"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+</svg>
+<main>
+  <h1>Jean Lescut-Müller</h1>
+  <p class="role">Lead Data Scientist · Founder · Zürich</p>
+  <p>I build machine-learning products: 13 years of experience, most recently as Lead Data Scientist at Meta Reality Labs. Two MSc degrees, from Columbia University and CentraleSupélec. Official XGBoost contributor. I work every day with many AI coding agents in parallel, and build the tooling that makes that safe.</p>
+  <p><a class="btn" href="https://www.linkedin.com/in/jeanlescut"><svg class="i"><use href="#i-in"/></svg>LinkedIn</a>&nbsp; <a class="btn alt" href="https://stackoverflow.com/users/3871036/jean-lescut"><svg class="i"><use href="#i-so"/></svg><span class="two">Stack Overflow<span class="joke">(is it still alive?)</span></span></a></p>
+
+  <h2><svg class="i"><use href="#i-spark"/></svg>Featured projects</h2>
+  <div class="featured">
+    <div class="feat">
+      <div class="head"><span class="ic"><svg class="i"><use href="#i-film"/></svg></span><div><h3>Cutaway</h3><div class="kind">Android app · Europe</div></div></div>
+      <p>A map of where films and series were shot across Europe, mainly in France and Switzerland, with their scenes to watch right where they were filmed. A 2014 start-up, revived in 2026, coming to Google Play.</p>
+      <a class="go" href="/cutaway/privacy/">Privacy policy<svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="feat">
+      <div class="head"><span class="ic"><svg class="i"><use href="#i-sat"/></svg></span><div><h3>Sigyx</h3><div class="kind">Computer vision · Commodities</div></div></div>
+      <p>Mines, ponds and stockpiles change before prices do. Sigyx measures those changes from satellite images and turns them into signals for commodity trading. CTO &amp; co-founder.</p>
+      <a class="go" href="https://sigyx.com">sigyx.com<svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="feat">
+      <div class="head"><span class="ic"><svg class="i"><use href="#i-chip"/></svg></span><div><h3>ChipDyno</h3><div class="kind">Edge AI · Benchmarking</div></div></div>
+      <p>The dyno for AI chips: upload a vision model and a video; it is replayed at camera speed on real edge AI chips, with a report of speed, accuracy and watts.</p>
+      <a class="go" href="https://chipdyno.com">chipdyno.com<svg class="i"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <h2><svg class="i"><use href="#i-brief"/></svg>Experience</h2>
+  <table>
+    <tr><td class="when">2026</td><td><strong>Meta Reality Labs</strong> · Lead Data Scientist</td></tr>
+    <tr><td class="when">2025</td><td><strong><a href="https://sigyx.com">Sigyx</a></strong> · CTO &amp; Co-Founder</td></tr>
+    <tr><td class="when">2021 – 2024</td><td><strong>Richemont</strong> · Data Science Lead</td></tr>
+    <tr><td class="when">2017 – 2021</td><td><strong>Expedia Group</strong> · Senior Data Scientist</td></tr>
+    <tr><td class="when">2016 – 2017</td><td><strong>ITrust</strong> · Lead Data Scientist</td></tr>
+    <tr><td class="when">2015 – 2016</td><td><strong>EY Advisory</strong> · Data Science Consultant</td></tr>
+    <tr><td class="when">2014 – 2015</td><td><strong>Cutaway</strong> · Co-founder and team lead</td></tr>
+    <tr><td class="when">2013 – 2014</td><td><strong>Cereza Conseil</strong> · Data Scientist Consultant</td></tr>
+  </table>
+
+  <h2><svg class="i"><use href="#i-term"/></svg>Agentic workflows</h2>
+  <p class="lead">I run many Claude Code and Codex agents in parallel, across a laptop, a home server and the cloud. To make that productive and safe, I built my own tooling around them. The open-source ones are linked.</p>
+  <div class="items">
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-search"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/agent-resume">agent-resume</a><span class="tag">open source</span></b>Index, search and resume Claude Code and Codex sessions across machines; restore them all after a crash.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-gauge"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/agent-tracker">agent-tracker</a><span class="tag">open source</span></b>Reverse-engineers, from measurements, how Claude Code and Codex compute their usage limits.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-bell"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/agent-notify">agent-notify</a> · <a href="https://github.com/JeanLescutMuller/agent-statusline">agent-statusline</a><span class="tag">open source</span></b>Notifications across many agent panes, and one status line for Claude Code and Codex.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-grid"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/claude-close-keep-screen">claude-close-keep-screen</a> · <a href="https://github.com/JeanLescutMuller/agent-quota">agent-quota</a><span class="tag">open source</span></b>Close idle sessions to free memory; protect and spend the weekly agent quota.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><div><b>agent-firewall</b>A firewall for agents: every email and chat message an agent reads is checked for prompt injection; every personal fact in a message it sends is listed for review. A hook vets every tool call.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-key"/></svg></span><div><b>agent-vault</b>Passwords agents never see: they log in to websites through a vault that types the password for them; secrets are masked in every output.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-globe"/></svg></span><div><b>agent-chrome</b>Agents in the browser: each drives its own Chrome profile, headless by default, with every tab accounted for.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-clock"/></svg></span><div><b>job-runner</b>Scheduled agent jobs: recurring agent and data jobs across several machines, with statuses and one phone dashboard.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-mic"/></svg></span><div><b>processing-meeting-recording</b>Meetings to transcripts: a recording becomes a compressed video, an MP3 and a transcript with the speakers named.</div></div>
+  </div>
+
+  <h2><svg class="i"><use href="#i-merge"/></svg>Open source and other projects</h2>
+  <div class="items">
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-merge"/></svg></span><div><b>XGBoost<span class="tag">official contributor</span></b>The tutorial “Custom Objective and Evaluation Metric”: <a href="https://github.com/dmlc/xgboost/pull/9213">#9213</a> (2023) and <a href="https://github.com/dmlc/xgboost/pull/6367">#6367</a> (2020).</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-robot"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/robotics-radar">robotics-radar</a></b>An LLM-powered radar that finds AI-robotics events in Zürich and registers for them.</div></div>
+    <div class="item"><span class="ic"><svg class="i"><use href="#i-tv"/></svg></span><div><b><a href="https://github.com/JeanLescutMuller/nas-media">nas-media</a></b>Built for my wife, who wanted Netflix, not Sonarr and Radarr: she picks a show or a film in Plex, and it downloads by itself on our home NAS.</div></div>
+  </div>
+
+  <footer>© Jean Lescut-Müller · Zürich</footer>
+</main>
+</body>
+</html>
